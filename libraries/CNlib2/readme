@@ -1,0 +1,8 @@
+Compound Neuron library
+
+neuron classes in this library are designed to be assembled into one compound
+C type structure to be integrated simultaneously (as they should be) instead
+of implicit decoupling by seperate integration function calls in the older
+neurlib. 
+
+The version 2 uses STL type lists and vectors instead of home-made versions.

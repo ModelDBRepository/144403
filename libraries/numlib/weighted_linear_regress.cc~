@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------------------
+   Author: Thomas Nowotny
+  
+   Institute: Center for Computational Neuroscience and Robotics
+              University of Sussex
+	     Falmer, Brighton BN1 9QJ, UK 
+  
+   email to:  T.Nowotny@sussex.ac.uk
+  
+   initial version: 2007-02-22
+  
+--------------------------------------------------------------------------*/
+
+
+#ifndef WEIGHTED_LINEAR_REGRESS_CC
+#define WEIGHTED_LINEAR_REGRESS_CC
+
+#include <cmath>
+
+double weighted_linear_regress(double *y, int n)
+{
+  double tmp;
+  if (n > 1) {
+    tmp= (sum_sq - sum*sum/n)/(n-1);
+    if (tmp > 0) return sqrt(tmp);
+  }
+  return 0.0;
+}
+
+#endif

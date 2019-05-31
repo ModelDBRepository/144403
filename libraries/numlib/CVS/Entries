@@ -1,0 +1,34 @@
+/TNmath.cc/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/TNmath.h/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/cln_eld.cc/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/cln_eld.h/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/clock.cc/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/clock.h/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/dclock.cc/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/dclock.h/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/dpolynom.cc/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/dpolynom.h/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/eld.cc/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/eld.h/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/matrix.cc/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/matrix.h/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/point.cc/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/point.h/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/polynom.cc/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/polynom.h/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/power_of_two.cc/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/power_of_two.h/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/test_mat.cc/1.1.1.1/Mon Nov 20 09:56:44 2000//
+/test_vec.cc/1.1.1.1/Mon Nov 20 09:56:44 2000//
+D/apfloat////
+D/cln////
+/basemath.cc/1.2/Fri Mar 22 00:53:55 2002//
+/basemath.h/1.2/Thu Feb 28 19:59:04 2002//
+/gauss.cc/1.1/Sat Mar  9 01:43:36 2002//
+/gauss.h/1.1/Sat Mar  9 01:43:08 2002//
+/logbinom.cc/1.1/Wed May  8 01:36:48 2002//
+/randomGen.cc/1.1/Fri Feb  1 23:36:50 2002//
+/randomGen.h/1.1/Sat Mar  9 01:27:44 2002//
+/standard_deviation.cc/1.1/Mon May  6 00:49:40 2002//
+/vector.cc/1.2/Thu May  2 18:37:43 2002//
+/vector.h/1.2/Thu May  2 21:31:36 2002//

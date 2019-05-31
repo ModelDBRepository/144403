@@ -1,0 +1,91 @@
+/*--------------------------------------------------------------------------
+   Author: Thomas Nowotny
+  
+   Institute: Institute for Nonlinear Dynamics
+              University of California San Diego
+              La Jolla, CA 92093-0402
+  
+   email to:  tnowotny@ucsd.edu
+  
+   initial version: 2005-08-17
+  
+--------------------------------------------------------------------------*/
+
+
+#ifndef CN_POPPOISSONN_CC
+#define CN_POPPOISSONN_CC
+
+#include "CN_neuron.cc"
+
+PopPoissonN::PopPoissonN(int inlabel, vector<int> inpos,
+			     double *the_p= POPPOI_p):
+  neuron(inlabel, POPPOI_IVARNO, POPPOISSONN,
+	      inpos, the_p, POPPOI_PNO)
+{
+  fire_t= -1e10;
+  setIdx(-1);
+}
+
+PopPoissonN::PopPoissonN(int inlabel, double *the_p= POPPOI_p):
+  neuron(inlabel, POPPOI_IVARNO, POPPOISSONN,
+	 the_p, POPPOI_PNO)
+{
+  fire_t= -1e10;
+  setIdx(-1);
+}
+
+PopPoissonN::~PopPoissonN()
+{
+}
+
+double PopPoissonN::E(double *x)
+{
+  static int it;
+  if (x[0] - fire_t < PPSPIKE_DURATION) {  // voltage from spike template
+    it= (int) ((x[0] - fire_t)/PPSPIKE_DT);
+    cerr << it << " " << PPSPIKEV[it] << endl;
+    return PPSPIKEV[it];
+  }
+  else {
+    cerr << " max " << PPSPIKEV[PPMAXIT]<< endl;
+    cerr << PPMAXIT << PPSPIKEV[PPMAXIT]<< endl;    
+    return PPSPIKEV[PPMAXIT];  // baseline value
+  }
+}
+
+void PopPoissonN::validate_E(double *x, double dt)
+{
+  if (x[0] - fire_t < p[0]) {
+    // do nothing we are still spiking/refractory
+  }
+  else {
+    if (R.n() <= *Lambda*dt) {
+      next_spike= x[0];
+    }
+  }
+}
+
+void PopPoissonN::step()
+{
+  fire_t= next_spike;
+}
+
+void PopPoissonN::init(double *x, double *iniVars)
+{
+  fire_t= -1e10;
+  next_spike= -1e10;
+}
+
+// allow to reference an external parameter Lambda
+// so that it does not have to be reset all the time
+void PopPoissonN::set_Lambda(double *Lbd)
+{
+  Lambda= Lbd;
+}
+
+#endif
+
+
+
+
+
